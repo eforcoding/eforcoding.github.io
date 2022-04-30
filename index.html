@@ -54,7 +54,7 @@
           d="M0,96L48,128C96,160,192,224,288,240C384,256,480,224,576,186.7C672,149,768,107,864,101.3C960,96,1056,128,1152,128C1248,128,1344,96,1392,80L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
         ></path>
       </svg>
-    </section>
+    </section>  
 
     <!-- akhir jumbotron -->
 
@@ -68,9 +68,9 @@
         </div>
         <div class="row justify-content-center fs-5">
           <div class="col-4 mb-4">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab suscipit adipisci necessitatibus cum consequatur enim, facere repellendus dolorem soluta alias.</p>
+            <p>My name is "Efortuntrio" I am a student of Informatics Study Program UNSULBAR.</p>
           </div>
-          <div class="col-4 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequatur quod nulla beatae cupiditate omnis ea odit fugiat illum quam.</div>
+          <div class="col-4 mb-4">Here I will show my learning process, becoming a programmer</div>
         </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -97,7 +97,7 @@
             <div class="card">
               <img src="img/amage1.jpeg" class="card-img-top" alt="projects1" />
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">this is the view from my own Github account</p>
               </div>
             </div>
           </div>
@@ -105,7 +105,7 @@
             <div class="card">
               <img src="img/image2.jpeg" class="card-img-top" alt="projects2" />
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">this is the file of the task and project that I created</p>
               </div>
             </div>
           </div>
@@ -113,7 +113,7 @@
             <div class="card">
               <img src="img/image4.jpeg" class="card-img-top" alt="projects3" />
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">This is a task given by the Lecturer</p>
               </div>
             </div>
           </div>
@@ -121,7 +121,7 @@
             <div class="card">
               <img src="img/image5.jpeg" class="card-img-top" alt="projects4" />
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">This is a task given by the Lecturer</p>
               </div>
             </div>
           </div>
@@ -148,18 +148,18 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-6">
-            <form>
+            <form name="efortuntrio-Contact-form">
               <div class="mb-3">
                 <label for="name" class="form-label">Nama Lengkap</label>
-                <input type="text" class="form-control" id="name" aria-describedby="name">
+                <input type="text" class="form-control" id="name" aria-describedby="name" name="nama">
                 </div>
                 <div class="mb-3">
                   <label for="email" class="form-label">Email</label>
-                  <input type="text" class="form-control" id="email" aria-describedby="email">
+                  <input type="text" class="form-control" id="email" aria-describedby="email" name="email">
                   </div>
               <div class="mb-3">
                 <label for="Pesan" class="form-label"></label>
-                <textarea class="form-control" id="Pesan" rows="3"></textarea>
+                <textarea class="form-control" id="Pesan" rows="3" name="pesan"></textarea>
                 </div>
               
               <button type="submit" class="btn btn-primary">Kirim</button>
@@ -180,5 +180,17 @@
     <!-- Akhir footer -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script>
+      const scriptURL = '<https://script.google.com/macros/s/AKfycbymdi8tHwi_S2A2fnac92nXeqiwtoy3nf1GTul6zbvjj0c5kG3dY8UZ5rHfkPYRxKLJ/exec>'
+      const form = document.forms['efortuntrio-Contact-form']
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
   </body>
 </html>
